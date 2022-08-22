@@ -3,7 +3,8 @@ const data_base = require('../config/data_base'); //calls database configuration
 
 exports.IndexPage = async (req,res)=>{
     try {
-        res.render("index", {});
+        //res.render("index", {});
+        res.sendFile(__dirname + '/index.html')
     } catch (error) {
         console.log(error)
     }
