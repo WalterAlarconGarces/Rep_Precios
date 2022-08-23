@@ -2,7 +2,7 @@ const express = require('express');
 const { engine } = require("express-handlebars");   //required in order to use handlebars system
 const exphbs = require("express-handlebars");   //
 require('dotenv').config(); //required in order to use .env file
-const port = process.env.PORT
+const port = process.env.PORT || 3000;
 const app = express()
 const data_base = require('./config/data_base'); //calls database configuration
 const pagesRoutes = require('./routes/pagesRoutes');    //manages the HTML paths and methods, with respect to the "/pages" path.
